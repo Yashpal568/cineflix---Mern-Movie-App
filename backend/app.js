@@ -5,7 +5,7 @@ const helmet = require("helmet");
 const sanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
-const cors = require('cors');
+const cors = require("cors");
 
 const path = require("path");
 const moviesRouter = require("./Routes/moviesRoutes");
@@ -19,28 +19,25 @@ const app = express();
 // cors
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://cineflix-mern-movie-app.vercel.app"
+  "https://cineflix-mern-movie-app.vercel.app",
 ];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true
-}));
-
-app.options("/api/*", cors());
-
-
-
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+    methods: "GET,POST,PATCH,PUT,DELETE,OPTIONS",
+    allowedHeaders: "Content-Type,Authorization",
+  })
+);
 
 app.use(helmet());
-
-
 
 const limiter = rateLimit({
   max: 1000,
