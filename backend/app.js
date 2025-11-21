@@ -17,10 +17,24 @@ const globalErrorHandler = require("./Controllers/errorController"); // ✅ FIXE
 const app = express();
 
 // cors
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://cineflix-mern-movie-app.vercel.app"
+];
+
 app.use(cors({
-  origin: 'http://localhost:5173', // allow your React app
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
+
+app.options("*", cors());
+
 
 app.use(helmet());
 
