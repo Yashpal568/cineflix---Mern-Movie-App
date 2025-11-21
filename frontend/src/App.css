@@ -1,0 +1,288 @@
+/* ------------------------------
+   CineFlix - Global styles
+   Pastel gradient theme, soft shadows
+   ------------------------------ */
+
+/* CSS variables (theme) */
+:root{
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --muted: #8b93a7;
+  --accent-1: linear-gradient(135deg, #b5aaff 0%, #ffd5f3 100%); /* pastel purple -> pink */
+  --accent-2: linear-gradient(135deg, #bfe7ff 0%, #d1c7ff 100%); /* pastel blue -> lavender */
+  --primary: #6b46ff; /* purple */
+  --accent: #8b5cf6;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --shadow-soft: 0 6px 18px rgba(15,23,42,0.06);
+  --shadow-subtle: 0 3px 8px rgba(15,23,42,0.04);
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --glass: rgba(255,255,255,0.6);
+  --text: #0f172a;
+}
+
+/* Reset & fundamentals */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  font-size:15px;
+}
+
+/* Link reset */
+a{ color:inherit; text-decoration:none; }
+
+/* ------------------------------
+   Top Navbar
+   ------------------------------ */
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 20px;
+  background: rgba(255,255,255,0.9);
+  border-bottom: 1px solid rgba(15,23,42,0.04);
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:60;
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.navbar .brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+  color:var(--primary);
+  font-size:1.05rem;
+}
+
+.navbar .nav-actions{
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+
+/* Small link style */
+.navbar a { color: #374151; font-weight:500; padding:6px 8px; border-radius:8px;}
+.navbar a:hover { background: rgba(139,92,246,0.06); color:var(--primary) }
+
+/* Add profile pic / admin badge small helper */
+.user-badge{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+}
+
+/* ------------------------------
+   Sidebar (Admin)
+   ------------------------------ */
+.sidebar {
+  width:240px;
+  height:100vh;
+  position:fixed;
+  top:0; left:0;
+  padding:28px 18px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
+  border-right:1px solid rgba(15,23,42,0.04);
+  box-shadow: var(--shadow-subtle);
+  z-index:50;
+}
+
+.sidebar h2{ display:flex; align-items:center; gap:8px; color:var(--primary); font-size:1.05rem; margin:0 0 18px 0}
+.sidebar nav{ display:flex; flex-direction:column; gap:8px }
+.sidebar a{ display:flex; align-items:center; gap:12px; padding:10px 12px; border-radius:10px; color:#334155; font-weight:600 }
+.sidebar a.active, .sidebar a:hover{ background: rgba(139,92,246,0.06); color:var(--primary) }
+
+/* ------------------------------
+   Layout helpers (Main content when sidebar exists)
+   ------------------------------ */
+.main-with-sidebar { margin-left: 260px; padding: 84px 28px 48px 28px; min-height:100vh; }
+
+/* Small layout for pages (no sidebar) */
+.container{ max-width:1200px; margin: 84px auto 48px; padding: 0 20px; }
+
+/* ------------------------------
+   Card (movie card, admin cards)
+   ------------------------------ */
+.card{
+  background:var(--card);
+  border-radius: var(--radius-lg);
+  padding:12px;
+  box-shadow: var(--shadow-soft);
+  transition: transform .18s ease, box-shadow .18s ease;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+.card:hover{ transform:translateY(-6px) }
+
+/* Movie title & meta */
+.card h3{ margin:10px 0 6px; font-size:1.05rem; }
+.card p.meta{ margin:0; color:var(--muted); font-size:0.9rem; }
+
+/* ------------------------------
+   Movie grid & poster container
+   ------------------------------ */
+.grid {
+  display:grid;
+  gap:22px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+/* Poster wrapper keeps aspect ratio and prevents cropping.
+   Using object-fit: contain ensures whole poster visible inside box. */
+.poster-wrapper{
+  width:100%;
+  height: 360px;               /* fixed visual poster height (adjustable) */
+  border-radius: 12px;
+  overflow:hidden;
+  background: linear-gradient(180deg, #f8fafc, #fff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 1px solid rgba(15,23,42,0.03);
+}
+
+/* Poster image rules: show full poster inside wrapper */
+.poster-wrapper img.poster-img{
+  width:auto;        /* allow letterboxing left/right */
+  max-width:100%;
+  height:100%;
+  max-height:100%;
+  object-fit:contain;   /* IMPORTANT: prevents cropping */
+  display:block;
+}
+
+/* If you prefer uniform width and cropping: use object-fit:cover (not used here). */
+
+/* Movie card layout */
+.movie-card{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* metadata row */
+.meta-row{ display:flex; align-items:center; gap:10px; justify-content:space-between }
+
+/* ------------------------------
+   Filters bar
+   ------------------------------ */
+.filter-bar {
+  display:flex;
+  gap:12px;
+  margin-bottom:18px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.filter-bar select, .filter-bar input {
+  border:1px solid rgba(15,23,42,0.06);
+  padding:8px 10px;
+  border-radius:8px;
+  background:#fff;
+  min-width:140px;
+}
+
+/* ------------------------------
+   Buttons
+   ------------------------------ */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:9px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  border: none;
+  font-weight:600;
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-primary{ background:var(--primary); color:#fff }
+.btn-primary:hover{ filter:brightness(1.03) }
+
+.btn-ghost{ background:transparent; color:#374151; border:1px solid rgba(15,23,42,0.04) }
+
+/* Load more */
+.load-more-wrapper { display:flex; justify-content:center; margin-top:18px; }
+.btn-load { padding:10px 18px; border-radius:12px; }
+
+/* Hidden utility */
+.hidden{ display:none !important }
+
+/* ------------------------------
+   Admin Dashboard cards (stat boxes)
+   ------------------------------ */
+.dashboard-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:22px; }
+.stat-card{ padding:20px; text-align:center; border-radius:12px; background:linear-gradient(180deg, rgba(139,92,246,0.04), rgba(139,92,246,0.02)); box-shadow:var(--shadow-subtle) }
+.stat-card h4{ margin:0; color:var(--muted); font-weight:600 }
+.stat-card p{ margin-top:8px; font-size:1.6rem; color:var(--primary); font-weight:800 }
+
+/* ------------------------------
+   Forms (Add/Edit movie, Profile)
+   ------------------------------ */
+.form-card{ background:var(--card); border-radius:12px; padding:18px; box-shadow:var(--shadow-soft) }
+.form-row{ display:flex; gap:12px; flex-wrap:wrap; }
+.form-row .field{ flex:1; min-width:220px; margin-bottom:12px; }
+.field input, .field textarea, .field select{
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(15,23,42,0.06); background:#fff;
+}
+
+/* Action row */
+.form-actions{ display:flex; gap:10px; justify-content:flex-end; margin-top:12px; }
+
+/* ------------------------------
+   Table / User list (Manage Users)
+   ------------------------------ */
+.table { width:100%; border-collapse:collapse; background:transparent; }
+.table thead th { text-align:left; padding:12px; color:var(--muted); font-weight:700; font-size:0.9rem }
+.table tbody td { padding:12px; border-top:1px solid rgba(15,23,42,0.03); vertical-align:middle }
+
+/* small inline controls */
+.inline-btn { font-weight:700; padding:6px 10px; border-radius:8px; border:none; cursor:pointer }
+.inline-btn.edit { background: rgba(99,102,241,0.08); color:var(--primary) }
+.inline-btn.danger { background: rgba(239,68,68,0.08); color:var(--danger) }
+
+/* ------------------------------
+   Profile & Tabs
+   ------------------------------ */
+.tabs { display:flex; gap:8px }
+.tab-btn { padding:8px 12px; border-radius:10px; cursor:pointer; background:#fff; border:1px solid rgba(15,23,42,0.03) }
+.tab-btn.active { background:var(--primary); color:#fff; box-shadow:var(--shadow-soft) }
+
+/* ------------------------------
+   Responsive tweaks
+   ------------------------------ */
+@media (max-width: 1024px){
+  .sidebar{ display:none; }
+  .main-with-sidebar{ margin-left:0; padding-top:84px }
+  .poster-wrapper{ height:300px; }
+  .dashboard-row { grid-template-columns:repeat(2,1fr) }
+}
+
+@media (max-width:640px){
+  .grid{ grid-template-columns:repeat(1,1fr); gap:16px }
+  .poster-wrapper{ height:220px }
+  .filter-bar{ gap:8px; }
+}
+
+/* ------------------------------
+   Small helpers
+   ------------------------------ */
+.center { display:flex; align-items:center; justify-content:center }
+.text-muted { color:var(--muted) }
+
+
+

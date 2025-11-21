@@ -1,0 +1,115 @@
+/* ============================================================
+   MOVIE DETAIL PAGE — DARK NEON THEME
+   ============================================================ */
+
+.detail-wrapper {
+  background: #0d0f14;
+  min-height: 100vh;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+/* ----------------- CARD ----------------- */
+.detail-card {
+  background: #13151b;
+  width: 100%;
+  max-width: 750px;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(155, 92, 255, 0.15);
+  transition: 0.3s ease;
+}
+
+.detail-card:hover {
+  box-shadow: 0 0 35px rgba(155, 92, 255, 0.3);
+}
+
+/* ----------------- POSTER ----------------- */
+.detail-poster {
+  width: 100%;
+  height: 1020x;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.detail-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ----------------- TEXT ----------------- */
+.detail-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.detail-description {
+  font-size: 15px;
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.detail-info p {
+  margin-bottom: 6px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.detail-info span {
+  font-weight: 600;
+  color: #9b5cff;
+}
+
+/* ----------------- BUTTONS ----------------- */
+.detail-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.detail-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #7f5af0, #9d4edd);
+  color: white;
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.delete-btn {
+  background: #d62828;
+  color: white;
+}
+
+.delete-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ----------------- STATES ----------------- */
+.detail-error,
+.detail-loading {
+  color: #bbb;
+  text-align: center;
+  padding-top: 150px;
+  font-size: 18px;
+}

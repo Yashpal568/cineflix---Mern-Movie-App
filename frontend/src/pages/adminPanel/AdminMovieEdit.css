@@ -1,0 +1,186 @@
+/* =============================
+   MAIN LAYOUT WRAPPER
+============================= */
+.admin-edit-wrapper {
+  background: #0d0f14;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+}
+
+/* Desktop sidebar gap */
+@media (min-width: 901px) {
+  .admin-edit-wrapper {
+    padding-left: 240px;
+  }
+}
+
+/* Mobile: remove left gap */
+@media (max-width: 900px) {
+  .admin-edit-wrapper {
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+
+.admin-edit-main {
+  flex: 1;
+  padding: 40px;
+}
+
+@media (max-width: 900px) {
+  .admin-edit-main {
+    padding: 20px;
+  }
+}
+
+.admin-edit-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #9b5cff;
+  margin-bottom: 25px;
+}
+
+/* =============================
+   DESKTOP TABLE UI (Old Good UI)
+============================= */
+.table-box {
+  background: #13151b;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  color: white;
+}
+
+.admin-table th {
+  background: #1a1c23;
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  color: #d3d3d3;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin-table td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.admin-table tr:hover {
+  background: rgba(155,92,255,0.1);
+}
+
+.table-input {
+  background: #0d0f14;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+  width: 100%;
+}
+
+.action-btn {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.2s;
+  margin-right: 6px;
+}
+
+.edit-btn { color: #6da9ff; }
+.del-btn { color: #ff5f59; }
+.save-btn { color: #38d39f; }
+.cancel-btn { color: #cccccc; }
+
+.edit-btn:hover { color: #9bc9ff; }
+.del-btn:hover { color: #ff7d79; }
+.save-btn:hover { color: #6eedbd; }
+.cancel-btn:hover { color: #fff; }
+
+/* =============================
+   MOBILE CARDS VIEW (New UI)
+============================= */
+
+.mobile-edit-list {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .desktop-table {
+    display: none;
+  }
+
+  .mobile-edit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .mobile-card {
+    background: #13151b;
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 18px rgba(155,92,255,0.2);
+  }
+
+  .mobile-card h4 {
+    color: #bb86fc;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .mobile-field {
+    margin-bottom: 12px;
+  }
+
+  .mobile-field label {
+    color: #bbb;
+    font-size: 13px;
+  }
+
+  .mobile-input {
+    width: 100%;
+    margin-top: 4px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #0d0f14;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+  }
+
+  .mobile-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+
+  .mobile-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+
+  .mobile-btn:last-child {
+    margin-right: 0;
+  }
+
+  .mobile-btn.edit { background: #7a4bff; color: white; }
+  .mobile-btn.save { background: #38d39f; color: white; }
+  .mobile-btn.cancel { background: #444; color: white; }
+  .mobile-btn.delete { background: #ff4747; color: white; }
+}

@@ -1,0 +1,222 @@
+/* ==============================
+   EDIT MOVIE — DARK RESPONSIVE
+   ============================== */
+
+.edit-wrapper {
+  min-height: 100vh;
+  padding: 120px 20px;
+  background: #0d0f14;
+  color: white;
+}
+
+.edit-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  color: #9b5cff;
+  margin-bottom: 20px;
+}
+
+/* Error */
+.edit-error {
+  text-align: center;
+  color: #ff4b4b;
+  margin-bottom: 15px;
+}
+
+/* Form Grid */
+.edit-form {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+}
+
+/* Left Side */
+.edit-left {
+  background: #13151b;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 25px rgba(155, 92, 255, 0.15);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Inputs */
+.edit-input,
+.edit-textarea {
+  background: #0d0f14;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 12px;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.edit-textarea {
+  min-height: 130px;
+  resize: none;
+  grid-column: span 2;
+}
+
+/* Focus */
+.edit-input:focus,
+.edit-textarea:focus {
+  border-color: #9b5cff;
+  box-shadow: 0 0 10px rgba(155, 92, 255, 0.4);
+  outline: none;
+}
+
+.full {
+  grid-column: span 2;
+}
+
+/* Button */
+.edit-btn2 {
+  background: linear-gradient(135deg, #7f5af0, #9d4edd);
+  padding: 12px;
+  color: white;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+  grid-column: 1 / -1 !important;  /* Take full grid width */
+  width: 100%;
+  display: block;
+}
+
+.edit-btn2:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.edit-form .edit-btn2 {
+  width: 100% !important;
+  display: block;
+}
+
+
+/* Right Section (Poster) */
+.edit-right {
+  text-align: center;
+  background: #13151b;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.preview-title {
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.preview-img {
+  width: 300px;
+  height: 450px;
+  border-radius: 15px;
+  border: 2px solid rgba(155, 92, 255, 0.3);
+  box-shadow: 0 0 25px rgba(155, 92, 255, 0.2);
+  object-fit: cover;
+}
+
+
+/* ===============================
+   LARGE MOBILE (max-width: 900px)
+   =============================== */
+@media (max-width: 900px) {
+  .edit-form {
+    grid-template-columns: 1fr; /* Form & poster vertical */
+    gap: 20px;
+  }
+
+  .edit-left {
+    grid-template-columns: 1fr !important; /* FORM vertical */
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .full {
+    grid-column: 1 / -1 !important;
+  }
+
+  .edit-right {
+    padding: 18px;
+  }
+
+  .preview-img {
+    width: 240px;
+    height: 350px;
+  }
+ .edit-btn2 {
+    width: 100% !important;
+    padding: 14px;
+  }
+
+
+  .edit-left {
+    padding: 12px !important;
+  }
+}
+
+/* ===============================
+   NORMAL MOBILE (max-width: 600px)
+   =============================== */
+@media (max-width: 600px) {
+  .edit-wrapper {
+    padding: 100px 14px;
+  }
+
+  .edit-title {
+    font-size: 26px;
+  }
+
+  .edit-left {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .edit-input,
+  .edit-textarea {
+    font-size: 14px;
+    padding: 10px !important;
+    width: 100% !important; /* FULL WIDTH INPUTS */
+  }
+
+  .preview-img {
+    width: 200px;
+    height: 300px;
+  }
+ .edit-btn2 {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+/* ===============================
+   SMALL PHONES (max-width: 400px)
+   =============================== */
+@media (max-width: 400px) {
+  .edit-wrapper {
+    padding: 80px 10px;
+  }
+
+  .edit-left {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .preview-img {
+    width: 160px;
+    height: 250px;
+  }
+
+ .edit-btn2 {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

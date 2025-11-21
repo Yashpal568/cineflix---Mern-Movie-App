@@ -1,0 +1,211 @@
+/* ------------------------------------------------------------- */
+/* --------------------- PAGE WRAPPER -------------------------- */
+/* ------------------------------------------------------------- */
+
+.admin-users-wrapper {
+  margin-left: 240px; /* space for sidebar */
+  padding: 30px;
+  min-height: 100vh;
+  background: #0b0c10; /* dark theme */
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .admin-users-wrapper {
+    margin-left: 0;
+    padding-top: 110px;
+  }
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------- TITLE ----------------------------- */
+/* ------------------------------------------------------------- */
+
+.admin-users-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #bb86fc;
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------- CARD BOX -------------------------- */
+/* ------------------------------------------------------------- */
+
+.admin-users-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(155, 92, 255, 0.1);
+  overflow-x: auto;
+}
+
+/* ------------------------------------------------------------- */
+/* -------------------------- TABLE ---------------------------- */
+/* ------------------------------------------------------------- */
+
+.admin-users-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.admin-users-table thead tr {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.admin-users-table th {
+  padding: 12px;
+  color: #cfcfcf;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.admin-users-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #e8e8e8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Hover Effect */
+.admin-users-row {
+  transition: 0.25s ease;
+}
+
+.admin-users-row:hover {
+  background: rgba(155, 92, 255, 0.12);
+}
+
+/* ------------------------------------------------------------- */
+/* ---------- FIXED ALIGNMENT (NAME / EMAIL / ROLE) ------------ */
+/* ------------------------------------------------------------- */
+
+/* Center all by default */
+.admin-users-table th,
+.admin-users-table td {
+  text-align: center;
+}
+
+/* Left-align Name + Email */
+.admin-users-table th:nth-child(2),
+.admin-users-table th:nth-child(3),
+.admin-users-table td:nth-child(2),
+.admin-users-table td:nth-child(3) {
+  text-align: left;
+  padding-left: 22px;
+}
+
+/* Column widths */
+.admin-users-table th:nth-child(1),
+.admin-users-table td:nth-child(1) {
+  width: 60px;
+}
+
+.admin-users-table th:nth-child(4),
+.admin-users-table td:nth-child(4) {
+  width: 140px;
+}
+
+.admin-users-table th:nth-child(5),
+.admin-users-table td:nth-child(5) {
+  width: 120px;
+}
+
+/* Header style improvement */
+.admin-users-table th {
+  font-size: 15px;
+  color: #e3e3e3;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------ ROLE BADGE ------------------------- */
+/* ------------------------------------------------------------- */
+
+.admin-role-badge {
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.admin-role-admin {
+  background: rgba(155, 92, 255, 0.25);
+  color: #d8b4ff;
+  border: 1px solid rgba(155, 92, 255, 0.4);
+}
+
+.admin-role-user {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cccccc;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------ DELETE BTN ------------------------- */
+/* ------------------------------------------------------------- */
+
+.admin-delete-btn {
+  color: #ff6b6b;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  transition: 0.2s;
+}
+
+.admin-delete-btn:hover {
+  color: #ff3b3b;
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------- */
+/* ---------------------- MOBILE RESPONSIVE -------------------- */
+/* ------------------------------------------------------------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .admin-users-wrapper {
+    margin-left: 0;
+    padding: 100px 18px 40px;
+  }
+
+  .admin-users-card {
+    padding: 15px;
+  }
+
+  .admin-users-table {
+    min-width: 600px; /* slight scrolling */
+  }
+
+  .admin-users-title {
+    font-size: 24px;
+  }
+}
+
+/* ----------------------- MOBILE (Simple Scroll Table) ----------------------- */
+@media (max-width: 768px) {
+  /* KEEP TABLE AS TABLE — DO NOT BREAK IT */
+  .admin-users-table {
+    width: 100%;
+    overflow-x: auto;
+    display: block; /* enables horizontal scroll only */
+  }
+
+  .admin-users-card {
+    padding: 10px;
+  }
+
+  /* prevent ugly stretching */
+  .admin-users-table th,
+  .admin-users-table td {
+    white-space: nowrap;
+  }
+}
+

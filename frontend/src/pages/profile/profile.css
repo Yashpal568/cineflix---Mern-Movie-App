@@ -1,0 +1,163 @@
+/* ============================================================
+   PROFILE PAGE — CLEAN DARK NEON UI 
+============================================================ */
+
+/* Page Wrapper */
+.profile-wrapper {
+  min-height: 100vh;
+  padding: 120px 20px;
+  background: #0b0c10;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main Container */
+.profile-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Title */
+.profile-title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  color: #b887ff;
+  margin-bottom: 35px;
+  text-shadow: 0 0 15px rgba(155, 92, 255, 0.4);
+}
+
+/* TAB BOX */
+.profile-tabs-box {
+  background: #13151b;
+  padding: 12px;
+  border-radius: 16px;
+  width: fit-content;
+  margin: 0 auto 35px auto;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(155,92,255,0.2);
+  display: flex;
+  gap: 12px;
+}
+
+/* Tabs */
+.profile-tab {
+  padding: 10px 26px;
+  border-radius: 10px;
+  background: #1a1d24;
+  color: #ccc;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.profile-tab:hover {
+  background: rgba(155,92,255,0.15);
+}
+
+.profile-tab.active {
+  background: linear-gradient(135deg, #7f5af0, #9d4edd);
+  color: white;
+  box-shadow: 0 0 20px rgba(155,92,255,0.5);
+  border-color: transparent;
+}
+
+/* Card Box */
+.profile-card {
+  background: #13151b;
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 0 30px rgba(155,92,255,0.25);
+  margin-bottom: 40px;
+}
+
+/* Card Title */
+.profile-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #9b5cff;
+  text-shadow: 0 0 10px rgba(155,92,255,0.5);
+}
+
+/* Input */
+.profile-input {
+  width: 100%;
+  background: #0d0f14;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 14px;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.profile-input:focus {
+  border-color: #9b5cff;
+  box-shadow: 0 0 12px rgba(155,92,255,0.5);
+  outline: none;
+}
+
+/* Save Button */
+.profile-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #7f5af0, #9d4edd);
+  padding: 14px;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.profile-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #d62828 !important;
+}
+
+.delete-btn:hover {
+  opacity: 0.85;
+}
+
+/* ==============================
+   MOBILE FIXES
+================================ */
+@media (max-width: 600px) {
+  .profile-wrapper {
+    padding: 100px 12px;
+  }
+
+  .profile-tabs-box {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .profile-tab {
+    flex: 1;
+    text-align: center;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-input {
+    padding: 12px;
+  }
+
+  .profile-btn {
+    padding: 12px;
+  }
+}

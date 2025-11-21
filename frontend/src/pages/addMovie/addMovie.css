@@ -1,0 +1,170 @@
+/* ===========================
+   ADD MOVIE — DARK RESPONSIVE
+   =========================== */
+
+.add-wrapper {
+  padding: 120px 20px;
+  background: #0d0f14;
+  color: white;
+  min-height: 100vh;
+}
+
+.add-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  color: #9b5cff;
+  margin-bottom: 20px;
+}
+
+/* FORM GRID */
+.add-form {
+  max-width: 1100px;
+  margin: auto;
+  background: #13151b;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 0 25px rgba(155,92,255,0.2);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Inputs */
+.add-input,
+.add-textarea {
+  background: #0d0f14;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 12px;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.25s;
+  width: 100%;
+}
+
+.add-textarea {
+  min-height: 120px;
+  resize: none;
+  grid-column: 1 / -1;
+}
+
+.add-input:focus,
+.add-textarea:focus {
+  border-color: #9b5cff;
+  box-shadow: 0 0 10px rgba(155,92,255,0.4);
+}
+
+/* Full width input */
+.full {
+  grid-column: 1 / -1;
+}
+
+/* FULL WIDTH BUTTON */
+.add-btn {
+  background: linear-gradient(135deg, #7f5af0, #9d4edd);
+  padding: 14px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+
+  width: 100%;
+  grid-column: 1 / -1 !important;
+  display: block;
+}
+
+.add-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* POSTER PREVIEW */
+.add-preview {
+  width: 280px;
+  height: 420px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 2px solid rgba(155,92,255,0.3);
+  box-shadow: 0 0 25px rgba(155,92,255,0.2);
+}
+
+/* ===========================
+   TABLET (max-width: 900px)
+   =========================== */
+@media (max-width: 900px) {
+  .add-form {
+    grid-template-columns: 1fr !important;
+    padding: 20px !important;
+    gap: 14px;
+  }
+
+  .add-textarea,
+  .full,
+  .add-btn {
+    grid-column: 1 / -1 !important;
+  }
+
+  .add-preview {
+    width: 230px;
+    height: 340px;
+  }
+}
+
+/* ===========================
+   MOBILE (max-width: 600px)
+   =========================== */
+@media (max-width: 600px) {
+  .add-wrapper {
+    padding: 90px 12px;
+  }
+
+  .add-form {
+    padding: 16px !important;
+    gap: 12px;
+  }
+
+  .add-input,
+  .add-textarea {
+    padding: 10px !important;
+    font-size: 14px;
+  }
+
+  .add-btn {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .add-preview {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+/* ===========================
+   SMALL PHONES (max-width: 400px)
+   =========================== */
+@media (max-width: 400px) {
+  .add-wrapper {
+    padding: 80px 10px;
+  }
+
+  .add-form {
+    padding: 12px !important;
+    gap: 10px;
+  }
+
+  .add-preview {
+    width: 160px;
+    height: 240px;
+  }
+
+  .add-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

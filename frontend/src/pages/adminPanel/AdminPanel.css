@@ -1,0 +1,136 @@
+/* ============================
+   ADMIN PANEL — DARK THEME
+   ============================ */
+
+.admin-wrapper {
+  display: flex;
+  width: 100%;
+  background: #0d0f14;
+  min-height: 100vh;
+  padding-top: 80px; /* space for fixed navbar */
+  color: white;
+}
+
+/* -----------------------
+   MAIN AREA
+   ----------------------- */
+.admin-main {
+  flex: 1;
+  margin-left: 240px; /* space for sidebar */
+  padding: 40px;
+}
+
+.admin-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #9b5cff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px rgba(155,92,255,0.4);
+}
+
+/* -----------------------
+   GRID CARDS
+   ----------------------- */
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.stat-card {
+  background: #13151b;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  box-shadow: 0 0 20px rgba(155,92,255,0.15);
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(155,92,255,0.3);
+}
+
+.stat-label {
+  color: #b3b3b3;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  color: #b06bff;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+/* ============================
+     RESPONSIVE BREAKPOINTS
+   ============================ */
+
+/* ---------- Large Tablets ---------- */
+@media (max-width: 900px) {
+  .admin-main {
+    margin-left: 0;     /* sidebar closes on mobile */
+    padding: 25px;
+    padding-top: 20px;
+  }
+
+  .admin-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 18px;
+  }
+
+  .stat-card {
+    padding: 24px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+}
+
+/* ---------- Mobile Phones ---------- */
+@media (max-width: 600px) {
+  .admin-wrapper {
+    padding-top: 100px; /* More space for navbar + sidebar toggle */
+  }
+
+  .admin-title {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .admin-main {
+    padding: 18px;
+  }
+
+  .admin-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 16px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-value {
+    font-size: 26px;
+  }
+}
+
+/* ---------- Extra Small Phones ---------- */
+@media (max-width: 400px) {
+  .admin-title {
+    font-size: 22px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-value {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,195 @@
+[
+  {
+    "name": "Riddick",
+    "description": "Left for dead on a sun-scorched planet, Riddick finds himself up against an alien race of predators. Activating an emergency beacon alerts two ships: one carrying a new breed of mercenary, the other captained by a man from Riddick's past.",
+    "duration": 119,
+    "totalRatings": 329,
+    "ratings": 6.8,
+    "releaseYear": 2013,
+    "releaseDate": "2013-09-04T00:00:00Z",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "directors": [
+      "David Twohy"
+    ],
+    "coverImage": "Riddick-2013.jpg",
+    "actors": [
+      "Vin Diesel",
+      "Karl Urban",
+      "Katee Sackhoff"
+    ],
+    "price": 50
+  },
+  {
+    "name": "The Millers",
+    "description": "A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico.",
+    "duration": 110,
+    "totalRatings": 201,
+    "ratings": 7.2,
+    "releaseYear": 2013,
+    "releaseDate": "2013-09-03T00:00:00Z",
+    "genres": [
+      "Comedy",
+      "Crime"
+    ],
+    "directors": [
+      "Rawson Marshall Thurber"
+    ],
+    "coverImage": "We're-the-Millers-2013.jpg",
+    "actors": [
+      "Jennifer Aniston",
+      "Jason Sudeikis",
+      "Emma Roberts"
+    ],
+    "price": 47
+  },
+  {
+    "name": "Captain America: The Winter Soldier",
+    "description": "As Steve Rogers struggles to embrace his role in the modern world and teams up with Natasha Romanoff, aka Black Widow, to battle a powerful yet shadowy enemy in present-day Washington, D.C.",
+    "duration": 136,
+    "totalRatings": 312,
+    "ratings": 7.7,
+    "releaseYear": 2014,
+    "releaseDate": "2014-04-02T00:00:00Z",
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "directors": [
+      "Anthony Russo",
+      "Joe Russo"
+    ],
+    "coverImage": "Captain-America-the-Winter-Soldier-2014.jpg",
+    "actors": [
+      "Chris Evans",
+      "Scarlett Johansson",
+      "Sebastian Stan"
+    ],
+    "price": 57
+  },
+  {
+    "name": "Behind the Candelabra",
+    "description": "Based on the autobiographical novel, the tempestuous 6-year relationship between Liberace and his (much younger) lover, Scott Thorson, is recounted.",
+    "duration": 118,
+    "totalRatings": 325,
+    "ratings": 6.8,
+    "releaseYear": 2013,
+    "releaseDate": "2013-05-21T00:00:00Z",
+    "genres": [
+      "Biography",
+      "Drama",
+      "Romance"
+    ],
+    "directors": [
+      "Steven Soderbergh"
+    ],
+    "coverImage": "Behind-the-candelabra-2013.jpg",
+    "actors": [
+      "Michael Douglas",
+      "Matt Damon",
+      "Scott Bakula",
+      "Eric Zuckerman"
+    ],
+    "price": 59
+  },
+  {
+    "name": "The Dark Knight Rises",
+    "description": "Eight years on, a new evil rises from where the Batman and Commissioner Gordon tried to bury it, causing the Batman to return and fight to protect Gotham City... the very city which brands him an enemy.",
+    "duration": 165,
+    "totalRatings": 530,
+    "ratings": 8.0,
+    "releaseYear": 2012,
+    "releaseDate": "2012-07-16T00:00:00Z",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "directors": [
+      "Christopher Nolan"
+    ],
+    "coverImage": "the-dark-knight-rises-2012.jpg",
+    "actors": [
+      "Christian Bale",
+      "Tom Hardy",
+      "Anne Hathaway"
+    ],
+    "price": 57
+  },
+  {
+    "name": "Robocop",
+    "description": "In 2028 Detroit, when Alex Murphy (Joel Kinnaman) a loving husband, father and good cop is critically injured in the line of duty, multinational conglomerate OmniCorp sees their chance for a part-man, part-robot police officer.",
+    "duration": 115,
+    "totalRatings": 300,
+    "ratings": 6.1,
+    "releaseYear": 2014,
+    "releaseDate": "2014-01-30T00:00:00Z",
+    "genres": [
+      "Action",
+      "Crime",
+      "Sci-Fi"
+    ],
+    "directors": [
+      "José Padilha"
+    ],
+    "coverImage": "Robocop-2014.jpg",
+    "actors": [
+      "Joel Kinnaman",
+      "Gary Oldman",
+      "Michael Keaton"
+    ],
+    "price": 65
+  },
+  {
+    "name": "Elysium",
+    "description": "In 2154, two classes of people exist: the very wealthy, who live on a pristine man-made space station called Elysium, and the rest, who live on an overpopulated, ruined Earth. Secretary Delacourt (Jodie Foster) will stop at nothing to enforce anti-immigration laws and preserve the luxurious lifestyle of the citizens of Elysium. But that doesn’t stop the people of Earth from trying to get in, by any means they can. When unlucky Max (Matt Damon) is backed into a corner, he agrees to take on a dangerous mission that could not only save his life—but bring equality to these polarized worlds.",
+    "duration": 109,
+    "totalRatings": 233,
+    "ratings": 6.8,
+    "releaseYear": 2013,
+    "releaseDate": "2013-08-07T00:00:00Z",
+    "genres": [
+      "Action",
+      "Drama",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "directors": [
+      "Neill Blomkamp"
+    ],
+    "coverImage": "Elysium-2013.jpg",
+    "actors": [
+      "Matt Damon",
+      "Jodie Foster",
+      "Sharlto Copley"
+    ],
+    "price": 60
+  },
+  {
+    "name": "Divergent",
+    "description": "In a futuristic Chicago, society is divided into five factions. At 16, teenagers must choose one. Tris (Shailene Woodley) discovers she is Divergent: a person who does not fit into a single faction. When she uncovers a plot to destroy all Divergents, she must find out what makes being different so dangerous before it's too late.",
+    "duration": 139,
+    "totalRatings": 264,
+    "ratings": 6.7,
+    "releaseYear": 2014,
+    "releaseDate": "2014-03-21T00:00:00Z",
+    "genres": [
+      "Action",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "directors": [
+      "Neil Burger"
+    ],
+    "coverImage": "Divergent-2014.jpg",
+    "actors": [
+      "Shailene Woodley",
+      "Theo James",
+      "Kate Winslet"
+    ],
+    "price": 52
+  }
+]
