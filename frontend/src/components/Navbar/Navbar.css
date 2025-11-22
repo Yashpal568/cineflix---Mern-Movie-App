@@ -18,9 +18,9 @@
   font-weight: 800;
   color: white;
   text-decoration: none;
-  display: flex;
-  align-items: center;
 }
+
+
 
 /* DESKTOP LINKS */
 .nav-links {
@@ -29,17 +29,51 @@
   align-items: center;
 }
 
+/* -------------------------------
+   UNDERLINE HOVER + ACTIVE
+-------------------------------- */
 .nav-item {
+  position: relative;
   color: #d3d3d3;
   font-size: 1rem;
   text-decoration: none;
-  transition: 0.3s;
+  padding-bottom: 3px;
+  transition: 0.25s ease;
 }
 
 .nav-item:hover {
   color: white;
 }
 
+/* underline animation */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #b987ff;
+  transition: 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE ROUTE STYLE */
+.nav-item.active {
+  color: white;
+  font-weight: 600;
+}
+
+.nav-item.active::after {
+  width: 100%;
+}
+
+
+
+/* LOGOUT BUTTON */
 .nav-btn {
   padding: 8px 18px;
   border-radius: 6px;
@@ -55,6 +89,8 @@
   color: white;
   cursor: pointer;
 }
+
+
 
 /* BACKDROP */
 .mobile-backdrop {
@@ -72,6 +108,8 @@
   opacity: 1;
   pointer-events: all;
 }
+
+
 
 /* DRAWER PANEL */
 .mobile-drawer {
@@ -92,6 +130,8 @@
   right: 0;
 }
 
+
+
 /* CLOSE BUTTON */
 .drawer-close {
   font-size: 2.1rem;
@@ -104,7 +144,9 @@
   cursor: pointer;
 }
 
-/* PROFILE BOX */
+
+
+/* PROFILE SECTION */
 .drawer-profile {
   text-align: center;
   margin-top: 50px;
@@ -116,18 +158,18 @@
   background: #9b5cff;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 28px;
-  font-weight: bold;
-  margin: 0 auto 10px auto;
+  justify-content: center;
   color: white;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 auto;
 }
 
 .drawer-username {
-  color: white;
   font-size: 1.2rem;
   font-weight: 700;
+  color: white;
 }
 
 .drawer-email {
@@ -135,7 +177,9 @@
   font-size: 0.9rem;
 }
 
-/* MENU ITEMS */
+
+
+/* MOBILE NAV LINKS */
 .drawer-links {
   margin-top: 25px;
   display: flex;
@@ -144,11 +188,11 @@
 
 .drawer-item {
   color: white;
-  font-size: 1.15rem;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 1.15rem;
   text-decoration: none;
-  transition: 0.25s;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: 0.25s ease;
 }
 
 .drawer-item:hover {
@@ -156,16 +200,17 @@
   padding-left: 8px;
 }
 
-/* LOGOUT BUTTON */
+
+
+/* LOGOUT (MOBILE) */
 .drawer-logout {
   margin-top: auto;
   padding: 14px;
+  border-radius: 10px;
+  border: none;
   width: 100%;
   background: #d62828;
   color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -173,7 +218,9 @@
   background: #b81e1e;
 }
 
-/* MOBILE ONLY */
+
+
+/* MOBILE */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -181,11 +228,7 @@
   .menu-btn {
     display: block;
   }
-  .drawer-logout {
-    margin-bottom: 50px;
-  } 
   .nav-logo {
-    margin-left: 65px; /* small shift to avoid overlap */
+    margin-left: 65px;
   }
-  
 }

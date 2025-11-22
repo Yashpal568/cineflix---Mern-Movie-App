@@ -15,6 +15,7 @@ import ManageUsers from "./pages/manageUser/ManageUser";
 import AdminMovieEdit from "./pages/adminPanel/AdminMovieEdit";
 import Profile from "./pages/profile/Profile";
 import Stats from "./pages/stats/Stats";
+import AdminProtectedRoute from "./components/protectedRoutes/AdminProtectedRoute";
 
 function App() {
   return (
@@ -24,10 +25,8 @@ function App() {
         {/*public / normal user*/ }
         <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
         <Route path="/movie/:id" element={<ProtectedRoute><MovieDetail /></ProtectedRoute>}/>
-        <Route path="/add" element={<ProtectedRoute><AddMovie /></ProtectedRoute>}/>
-        <Route path="/edit/:id" element={<ProtectedRoute><EditMovie /></ProtectedRoute>}/>
-        <Route path="/admin" element={<ProtectedRoute><AdminPanel /></ProtectedRoute>}/>
-        
+        <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+       
 
         {/*Auth routes*/}
         <Route path="/login" element={<Login />} />
@@ -35,11 +34,13 @@ function App() {
         <Route path="/forgot" element={<ForgetPassword />} /> 
         <Route path="*" element= {<NotFound />}/>
 
-         {/* ADMIN ROUTES with NESTED PAGES */}
-         <Route path="/users" element={<ManageUsers />} />
-         <Route path="/editmovies" element={<AdminMovieEdit />} />
-         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-         <Route path="/stats" element={<ProtectedRoute> <Stats /></ProtectedRoute>} />
+         {/* ADMIN ROUTES FULLY PROTECTED */}
+         <Route path="/users" element={<AdminProtectedRoute><ManageUsers /></AdminProtectedRoute>} />
+          <Route path="/add" element={<AdminProtectedRoute><AddMovie /></AdminProtectedRoute>}/>
+          <Route path="/admin" element={<AdminProtectedRoute><AdminPanel /></AdminProtectedRoute>}/>
+          <Route path="/edit/:id" element={<AdminProtectedRoute><EditMovie /></AdminProtectedRoute>}/>
+         <Route path="/editmovies" element={<AdminProtectedRoute><AdminMovieEdit /></AdminProtectedRoute>} />
+         <Route path="/stats" element={<AdminProtectedRoute><Stats /></AdminProtectedRoute>} />
       </Routes>
     </>
   );

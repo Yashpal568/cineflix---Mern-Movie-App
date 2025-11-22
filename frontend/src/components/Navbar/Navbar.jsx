@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 
@@ -18,7 +18,7 @@ export default function Navbar() {
     }
   }, [token]);
 
-  // Disable page scroll when menu is open
+  // Disable scroll on mobile drawer open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
   }, [menuOpen]);
@@ -31,22 +31,45 @@ export default function Navbar() {
 
   return (
     <>
-      {/* NAVBAR */}
+      {/* ------------------------ NAVBAR ------------------------ */}
       <nav className="dark-nav">
-        <Link to="/" className="nav-logo">🎬 Cineflix</Link>
+        <NavLink to="/" className="nav-logo">🎬 Cineflix</NavLink>
 
-        {/* DESKTOP LINKS */}
+        {/* ------------------ DESKTOP LINKS ------------------ */}
         <div className="nav-links">
           {token ? (
             <>
-              <Link to="/profile" className="nav-item">Profile</Link>
+              <NavLink to="/" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
+                Home
+              </NavLink>
 
-              {user?.role === "admin" && (
-                <Link to="/add" className="nav-item">Add Movie</Link>
-              )}
+              <NavLink to="/profile" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
+                Profile
+              </NavLink>
 
+              {/* ADMIN ONLY */}
               {user?.role === "admin" && (
-                <Link to="/admin" className="nav-item">Admin</Link>
+                <>
+                  <NavLink to="/add" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
+                    Add Movie
+                  </NavLink>
+
+                  <NavLink to="/admin" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
+                    Admin
+                  </NavLink>
+
+                  <NavLink to="/editmovies" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
+                    Edit Movies
+                  </NavLink>
+
+                  <NavLink to="/users" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
+                    Manage Users
+                  </NavLink>
+
+                  <NavLink to="/stats" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
+                    Stats
+                  </NavLink>
+                </>
               )}
 
               <button className="nav-btn" onClick={handleLogout}>
@@ -55,27 +78,29 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link to="/login" className="nav-item">Login</Link>
-              <Link to="/signup" className="nav-item">Signup</Link>
+              <NavLink to="/login" className="nav-item">Login</NavLink>
+              <NavLink to="/signup" className="nav-item">Signup</NavLink>
             </>
           )}
         </div>
 
-        {/* MOBILE HAMBURGER */}
+        {/* ------------------ MOBILE MENU BUTTON ------------------ */}
         <div className="menu-btn" onClick={() => setMenuOpen(true)}>☰</div>
       </nav>
 
-      {/* BACKDROP */}
+      {/* ------------------ BACKDROP ------------------ */}
       <div
         className={`mobile-backdrop ${menuOpen ? "show" : ""}`}
         onClick={() => setMenuOpen(false)}
       ></div>
 
-      {/* NETFLIX-STYLE DRAWER */}
+      {/* ------------------ MOBILE DRAWER ------------------ */}
       <div className={`mobile-drawer ${menuOpen ? "open" : ""}`}>
-        <button className="drawer-close" onClick={() => setMenuOpen(false)}>✕</button>
+        <button className="drawer-close" onClick={() => setMenuOpen(false)}>
+          ✕
+        </button>
 
-        {/* PROFILE SECTION */}
+        {/* ----------- PROFILE ----------- */}
         {user && (
           <div className="drawer-profile">
             <div className="drawer-avatar">
@@ -86,43 +111,57 @@ export default function Navbar() {
           </div>
         )}
 
-        {/* NAV ITEMS */}
+        {/* ------------------ DRAWER LINKS ------------------ */}
         <div className="drawer-links">
-          <Link to="/" className="drawer-item" onClick={() => setMenuOpen(false)}>
+
+          <NavLink to="/" className="drawer-item" onClick={() => setMenuOpen(false)}>
             Home
-          </Link>
+          </NavLink>
 
           {token && (
-            <Link to="/profile" className="drawer-item" onClick={() => setMenuOpen(false)}>
+            <NavLink to="/profile" className="drawer-item" onClick={() => setMenuOpen(false)}>
               Profile
-            </Link>
+            </NavLink>
           )}
 
           {user?.role === "admin" && (
             <>
-              <Link to="/add" className="drawer-item" onClick={() => setMenuOpen(false)}>
+              <NavLink to="/add" className="drawer-item" onClick={() => setMenuOpen(false)}>
                 Add Movie
-              </Link>
+              </NavLink>
 
-              <Link to="/admin" className="drawer-item" onClick={() => setMenuOpen(false)}>
-                Admin Panel
-              </Link>
+              <NavLink to="/admin" className="drawer-item" onClick={() => setMenuOpen(false)}>
+                Admin Dashboard
+              </NavLink>
+
+              <NavLink to="/editmovies" className="drawer-item" onClick={() => setMenuOpen(false)}>
+                Edit Movies
+              </NavLink>
+
+              <NavLink to="/users" className="drawer-item" onClick={() => setMenuOpen(false)}>
+                Manage Users
+              </NavLink>
+
+              <NavLink to="/stats" className="drawer-item" onClick={() => setMenuOpen(false)}>
+                Movie Stats
+              </NavLink>
             </>
           )}
 
           {!token && (
             <>
-              <Link to="/login" className="drawer-item" onClick={() => setMenuOpen(false)}>
+              <NavLink to="/login" className="drawer-item" onClick={() => setMenuOpen(false)}>
                 Login
-              </Link>
-              <Link to="/signup" className="drawer-item" onClick={() => setMenuOpen(false)}>
+              </NavLink>
+
+              <NavLink to="/signup" className="drawer-item" onClick={() => setMenuOpen(false)}>
                 Signup
-              </Link>
+              </NavLink>
             </>
           )}
         </div>
 
-        {/* LOGOUT */}
+        {/* ------------------ LOGOUT ------------------ */}
         {token && (
           <button
             className="drawer-logout"

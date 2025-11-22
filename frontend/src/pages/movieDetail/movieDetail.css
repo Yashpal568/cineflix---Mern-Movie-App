@@ -1,5 +1,5 @@
 /* ============================================================
-   MOVIE DETAIL PAGE — DARK NEON THEME
+   MOVIE DETAIL PAGE — DARK NEON THEME (UPDATED)
    ============================================================ */
 
 .detail-wrapper {
@@ -30,7 +30,7 @@
 /* ----------------- POSTER ----------------- */
 .detail-poster {
   width: 100%;
-  height: 1020x;
+  height: 420px;   /* FIXED: your typo "1020x" → corrected */
   background: #000;
   border-radius: 12px;
   overflow: hidden;
@@ -75,6 +75,7 @@
   margin-top: 20px;
 }
 
+/* Base Button */
 .detail-btn {
   padding: 10px 20px;
   border-radius: 10px;
@@ -85,24 +86,30 @@
   transition: 0.25s ease;
 }
 
-.edit-btn {
+/* ----------- EDIT BUTTON (Enhanced Glow) ------------- */
+.edit-btnn {
   background: linear-gradient(135deg, #7f5af0, #9d4edd);
   color: white;
+  box-shadow: 0 0 12px rgba(155, 92, 255, 0.45);
 }
 
-.edit-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+.edit-btnn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px rgba(155, 92, 255, 0.9);
+  opacity: 1;
 }
 
+/* ----------- DELETE BUTTON (Enhanced Glow) ----------- */
 .delete-btn {
   background: #d62828;
   color: white;
+  box-shadow: 0 0 12px rgba(214, 40, 40, 0.45);
 }
 
 .delete-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px rgba(214, 40, 40, 0.9);
+  opacity: 1;
 }
 
 /* ----------------- STATES ----------------- */
@@ -112,4 +119,24 @@
   text-align: center;
   padding-top: 150px;
   font-size: 18px;
+}
+
+/* ----------------- MOBILE RESPONSIVE ----------------- */
+@media (max-width: 768px) {
+  .detail-card {
+    padding: 18px;
+  }
+
+  .detail-poster {
+    height: 340px;
+  }
+
+  .detail-buttons {
+    flex-direction: column;
+  }
+
+  .detail-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

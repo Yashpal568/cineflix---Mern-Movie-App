@@ -114,20 +114,20 @@ exports.protect = asyncErrorHandler(async (req, res, next) => {
 });
 
 
-exports.restrict = (role) => {
-  return (req, res, next) => {
-    if (req.user !== role) {
-      const error = new CustomError(
-        "You do not have permission to perform this action",
-        403
-      );
-      next(error);
-    }
-    next();
-  };
-};
+// exports.restrict = (role) => {
+//   return (req, res, next) => {
+//     if (req.user !== role) {
+//       const error = new CustomError(
+//         "You do not have permission to perform this action",
+//         403
+//       );
+//       next(error);
+//     }
+//     next();
+//   };
+// };
 
-/*
+
 exports.restrict = (...role) => {
   return (req, res, next) => {
     if(!role.includes(req.user.role)){
@@ -136,7 +136,7 @@ exports.restrict = (...role) => {
     }
     next();
   }
-} */
+} 
 
 exports.forgotPassword = asyncErrorHandler(async (req, res, next) => {
   //1. GET USER BASED ON POSTED EMAIL

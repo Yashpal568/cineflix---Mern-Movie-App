@@ -8,6 +8,15 @@ const MovieDetail = () => {
   const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
   const [err, setErr] = useState("");
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // load user from localstorage
+    try {
+      const raw = localStorage.getItem("user");
+      if (raw) setUser(JSON.parse(raw));
+    } catch {}
+  }, []);
 
   useEffect(() => {
     api
@@ -29,6 +38,9 @@ const MovieDetail = () => {
 
   if (err) return <div className="detail-error">{err}</div>;
   if (!movie) return <div className="detail-loading">Loading...</div>;
+
+  // ADMIN CHECK
+  const isAdmin = user?.role === "admin";
 
   return (
     <div className="detail-wrapper">
@@ -56,10 +68,13 @@ const MovieDetail = () => {
           <p><span>⭐ Rating:</span> {movie.ratings} / 10</p>
         </div>
 
-        <div className="detail-buttons">
+
+        {/* SHOW BUTTONS ONLY IF ADMIN */}
+        {isAdmin && (
+          <div className="detail-buttons">
           <button
             onClick={() => navigate(`/edit/${movie._id}`)}
-            className="detail-btn edit-btn"
+            className="detail-btn edit-btnn"
           >
             Edit Movie
           </button>
@@ -71,6 +86,8 @@ const MovieDetail = () => {
             Delete Movie
           </button>
         </div>
+        )}
+        
       </div>
     </div>
   );
