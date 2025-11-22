@@ -1,3 +1,4 @@
+
 # 🎬 Cineflix — MERN Movie App
 
 
@@ -7,6 +8,12 @@
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Status](https://img.shields.io/badge/Status-Production-success)
+
+
+<p align="start">
+  <img src="https://skillicons.dev/icons?i=mongodb,express,react,nodejs&theme=dark" height="90" />
+</p>
+
 
 ---
 
