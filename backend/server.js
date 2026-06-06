@@ -20,14 +20,16 @@ console.log("Environment:", process.env.NODE_ENV);
 console.log("MongoDB Connection String:", process.env.CONN_STR);
 
 // Connect to MongoDB
+const dbURI = process.env.NODE_ENV === "development" ? process.env.LOCAL_CONS_STR : process.env.CONN_STR;
+console.log(`Connecting to database...`);
 mongoose
-  .connect(process.env.CONN_STR, {
+  .connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
     console.log("✅ DB Connection Successful");
-  })
+  });
  
 
 // Start server
