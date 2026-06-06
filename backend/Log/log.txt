@@ -1016,3 +1016,23 @@ Query took 62 milliseconds to fetch 10 documents.
 Query took 66 milliseconds to fetch 10 documents.
 Query took 66 milliseconds to fetch 10 documents.
 Query took 76 milliseconds to fetch undefined documents.
+Query took 17 milliseconds to fetch 0 documents.
+Query took 6 milliseconds to fetch 0 documents.
+A new movie document with name Riddick has been created by YASHPAL
+A new movie document with name Behind the Candelabra has been created by YASHPAL
+A new movie document with name The Dark Knight Rises has been created by YASHPAL
+A new movie document with name Robocop has been created by YASHPAL
+A new movie document with name The Millers has been created by YASHPAL
+A new movie document with name Elysium has been created by YASHPAL
+Query took 14 milliseconds to fetch 6 documents.
+Query took 6 milliseconds to fetch 6 documents.
+Query took 2 milliseconds to fetch 2 documents.
+Query took 7 milliseconds to fetch undefined documents.
+Query took 3 milliseconds to fetch 6 documents.
+Query took 4 milliseconds to fetch 6 documents.
+A new movie document with name Riddick has been created by YASHPAL
+A new movie document with name Behind the Candelabra has been created by YASHPAL
+A new movie document with name Elysium has been created by YASHPAL
+A new movie document with name The Millers has been created by YASHPAL
+A new movie document with name The Dark Knight Rises has been created by YASHPAL
+A new movie document with name Divergent has been created by YASHPAL

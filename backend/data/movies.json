@@ -15,7 +15,7 @@
     "directors": [
       "David Twohy"
     ],
-    "coverImage": "Riddick-2013.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/2/25/Riddick_film_poster.jpg",
     "actors": [
       "Vin Diesel",
       "Karl Urban",
@@ -38,7 +38,7 @@
     "directors": [
       "Rawson Marshall Thurber"
     ],
-    "coverImage": "We're-the-Millers-2013.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/a/a2/We%27re_the_Millers_poster.jpg",
     "actors": [
       "Jennifer Aniston",
       "Jason Sudeikis",
@@ -62,7 +62,7 @@
       "Anthony Russo",
       "Joe Russo"
     ],
-    "coverImage": "Captain-America-the-Winter-Soldier-2014.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/e/e8/Captain_America_The_Winter_Soldier_poster.jpg",
     "actors": [
       "Chris Evans",
       "Scarlett Johansson",
@@ -86,7 +86,7 @@
     "directors": [
       "Steven Soderbergh"
     ],
-    "coverImage": "Behind-the-candelabra-2013.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/a/ad/Behind_the_Candelabra.jpg",
     "actors": [
       "Michael Douglas",
       "Matt Damon",
@@ -111,7 +111,7 @@
     "directors": [
       "Christopher Nolan"
     ],
-    "coverImage": "the-dark-knight-rises-2012.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/8/83/Dark_knight_rises_poster.jpg",
     "actors": [
       "Christian Bale",
       "Tom Hardy",
@@ -135,7 +135,7 @@
     "directors": [
       "José Padilha"
     ],
-    "coverImage": "Robocop-2014.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/e/ee/Robocop_2014_poster.jpg",
     "actors": [
       "Joel Kinnaman",
       "Gary Oldman",
@@ -160,7 +160,7 @@
     "directors": [
       "Neill Blomkamp"
     ],
-    "coverImage": "Elysium-2013.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/f/f6/Elysium_2013_poster.jpg",
     "actors": [
       "Matt Damon",
       "Jodie Foster",
@@ -184,7 +184,7 @@
     "directors": [
       "Neil Burger"
     ],
-    "coverImage": "Divergent-2014.jpg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/en/d/d4/Divergent_poster_playbill.jpg",
     "actors": [
       "Shailene Woodley",
       "Theo James",
