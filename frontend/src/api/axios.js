@@ -2,6 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: "https://cineflix-mern-movie-app.onrender.com/api/v1",
+  timeout: 10000,
 });
 
 // It Attach token automatically
