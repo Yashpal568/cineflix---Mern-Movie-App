@@ -1036,3 +1036,7 @@ A new movie document with name Elysium has been created by YASHPAL
 A new movie document with name The Millers has been created by YASHPAL
 A new movie document with name The Dark Knight Rises has been created by YASHPAL
 A new movie document with name Divergent has been created by YASHPAL
+Query took 15 milliseconds to fetch 6 documents.
+Query took 3 milliseconds to fetch 6 documents.
+Query took 3 milliseconds to fetch 6 documents.
+Query took 4 milliseconds to fetch 6 documents.

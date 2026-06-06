@@ -29,6 +29,9 @@ mongoose
   })
   .then(() => {
     console.log("✅ DB Connection Successful");
+  })
+  .catch((err) => {
+    console.error("❌ DB Connection Failed:", err.message);
   });
  
 
