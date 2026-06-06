@@ -23,8 +23,8 @@ function App() {
       <Navbar />
       <Routes>
         {/*public / normal user*/ }
-        <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-        <Route path="/movie/:id" element={<ProtectedRoute><MovieDetail /></ProtectedRoute>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:id" element={<MovieDetail />}/>
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
        
 

@@ -37,12 +37,11 @@ export default function Navbar() {
 
         {/* ------------------ DESKTOP LINKS ------------------ */}
         <div className="nav-links">
+          <NavLink to="/" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
+            Home
+          </NavLink>
           {token ? (
             <>
-              <NavLink to="/" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
-                Home
-              </NavLink>
-
               <NavLink to="/profile" className={({ isActive }) => "nav-item" + (isActive ? " active" : "")}>
                 Profile
               </NavLink>
