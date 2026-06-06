@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://cineflix-mern-movie-app.onrender.com/api/v1",
+  baseURL: import.meta.env.DEV 
+    ? "http://localhost:3000/api/v1" 
+    : "https://cineflix-mern-movie-app.onrender.com/api/v1",
   timeout: 10000,
 });
 
